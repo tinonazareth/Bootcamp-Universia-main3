@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+  <header class="header">
+    <a href="/" class="logo"> <img src="/images/logo-white.svg"> </a>
+    <nav>
+      <a href="./index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Clientes</h1> <br> <br>
+    <h2>Lista de clientes</h2>
+
+    <table class="tabela-clientes">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Data de Nasc</th>
+          <th>CPF</th>
+          <th>Excluir</th>
+          <th>Editar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="cliente : ${cls}" class="linha-cliente">
+          <td>
+            <a th:href="'/clientes/'+${cliente.id}" th:text="${cliente.nome}" class="link-cliente"></a>
+          </td>
+          <td th:text="${cliente.email}"></td>
+          <td th:text="${cliente.dataDeNascimento}"></td>
+          <td th:text="${cliente.cpf}"></td>
+          <td>
+            <form action="/clientes/delete" method="post">
+              <input type="hidden" name="id" th:value="${cliente.id}">
+              <button class="botao-excluir">Excluir</button>
+            </form>
+          </td>
+          <td>
+            <form th:action="@{'/clientes/' + ${cliente.id} + '/edit'}" method="get">
+              <button type="submit" class="botao-editar">Editar</button>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table> <br> <br>
+
+    <h2>Cadastrar Novo Cliente</h2>
+    <form action="/clientes" method="post" class="formulario-cliente">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome" required>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="dataDeNascimento">Data de Nasc</label>
+      <input type="date" name="dataDeNascimento" id="dataDeNascimento" required>
+
+      <label for="cpf">CPF</label>
+      <input type="text" name="cpf" id="cpf" required>
+
+      <button type="submit" class="botao-enviar">Enviar</button>
+    </form>
+  </div>
+
+  <footer>
+    <span>
+      <img src="../static/images/logo.svg" alt="Barbearia">
+      <p>Cuidando com amor, vivendo com alegria: Barbearia, onde a vida é mais feliz</p>
+      <strong class="titulo">Siga Nossa Página</strong>
+
+      <p>Instagran: <a href="https://www.instagram.com/" target="_blank"><img src="../static/images/instagram.png"
+            alt="" width="45" height="45"></a>Rua Das maravilhas 1122 Parque Sucesso-SP (11) 95678-2564.</p>
+
+    </span>
+
+    <div>
+      <strong class="titulo">Links rápidos</strong>
+      <nav>
+        <a href="./index.html">Home</a>
+
+    </div>
+
+  </footer>
+
+  <div id="copyright">Desenvolvido por <a href="https://github.com/tinonazaareth" target="_blank">@equipe2soulcode</a>
+    <p>&copy; 2023<span style='font: size 0.5em;;'>&#128640; Desenvolvedores FullStack Java.</span></p>
+
+  </div>
+  <script src="../static/js/formulario.js"></script>
+</body>
+
+</html>

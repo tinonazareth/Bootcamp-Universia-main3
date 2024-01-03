@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head class="header">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Cliente</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+  <header>
+    <a href="/">
+      <img src="../static/images/logo-white.svg" alt="Barbearia">
+    </a>
+
+    <nav>
+      <a href="./index.html">Início</a>
+
+    </nav>
+  </header>
+  <h1>Editar Cliente</h1>
+
+  <form action="/clientes/edit" method="post" class="formulario-cliente">
+    <input type="hidden" name="id" th:value="${cl.id}">
+
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" th:value="${cl.nome}" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" th:value="${cl.email}" required>
+
+    <label for="dataDeNascimento">Data de Nasc</label>
+    <input type="date" name="dataDeNascimento" id="dataDeNascimento" th:value="${cl.dataDeNascimento}" required>
+
+    <label for="cpf">CPF</label>
+    <input type="text" name="cpf" id="cpf" th:value="${cl.cpf}" required>
+
+    <button>Enviar</button>
+    <br>
+    <br>
+    <br>
+  </form>
+
+  <a class="botao-editar" href="/clientes">Voltar</a><br>
+  <br>
+  <footer>
+    <span>
+      <img src="../static/images/logo.svg" alt="Barbearia">
+      <p>Cuidando com amor, vivendo com alegria: Barbearia, onde a vida é mais feliz</p>
+      <strong class="titulo">Siga Nossa Página</strong>
+
+      <p>Instagran: <a href="https://www.instagram.com/" target="_blank"><img src="../static/images/instagram.png"
+            alt="" width="45" height="45"></a>Rua Das maravilhas 1122 Parque Sucesso-SP (11) 95678-2564.</p>
+
+    </span>
+
+    <div>
+      <strong class="titulo">Links rápidos</strong>
+      <nav>
+        <a href="./index.html">Home/a>
+
+    </div>
+
+  </footer>
+
+  <div id="copyright">Desenvolvido por <a href="https://github.com/tinonazaareth" target="_blank">@equipe2soulcode</a>
+    <p>&copy; 2023<span style='font: size 0.5em;;'>&#128640; Desenvolvedores FullStack Java.</span></p>
+
+  </div>
+</body>
+
+</html>

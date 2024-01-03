@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Contato</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+  <main class="contato-cliente">
+    <h1>Entre em Contato</h1>
+  <p>Por favor, preencha o formulário abaixo para entrar em contato conosco.</p>
+  <p>Ou nos envie uma mensagem no WhatsApp (11) 95678-2564.
+  </p>
+
+  <form action="./contatoclientes.html" method="post" class="formulario-cliente">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone">
+
+    <label for="mensagem">Mensagem:</label>
+    <textarea id="mensagem" name="mensagem" rows="6" cols="48" required></textarea>
+
+    <input type="submit" class="botao-enviar" value="Enviar Mensagem">
+  </form>
+  </main>
+  
+  <footer>
+    <span>
+        <img src="../static/images/logo.svg" alt="Barbearia">
+        <p>Cuidando com amor, vivendo com alegria: Barbearia, onde a vida é mais feliz</p>
+        <strong class="titulo">Siga Nossa Página</strong>
+
+        <p>Instagran: <a href="https://www.instagram.com/" target="_blank"><img src="../static/images/instagram.png" alt="" width="45" height="45"></a>Rua Das maravilhas 1122 Parque Sucesso-SP (11) 95678-2564.</p>
+
+    </span>
+
+    <div>
+        <strong class="titulo">Links rápidos</strong>
+        <nav>
+            <a href="./index.html">Home</a>
+        </nav>
+    </div>
+
+</footer>
+
+<div id="copyright">Desenvolvido por <a href="https://github.com/tinonazaareth" target="_blank">@equipe2soulcode</a>
+    <p>&copy; 2023<span style='font: size 0.5em;;'>&#128640; Desenvolvedores FullStack Java.</span></p>
+
+</div>
+  <script src="../static/js/formulario.js"></script>
+</body>
+
+</html>

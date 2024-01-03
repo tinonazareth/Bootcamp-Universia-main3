@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garanta uma vida com confiança e estilo">
+    <title>Barbearia</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="agendamentos">
+
+    <header>
+        <a href="/">
+            <img src="/images/logo-white.svg" alt="Barbearia">
+        </a>
+        <nav>
+            <a href="./index.html">Início</a>
+
+        </nav>
+    </header>
+    <h2 class="titulo">Formulário de Agendamento</h2>
+
+    <form id="appointmentForm" action="/agendamentos" method="post">
+        <label for="servico">Serviço</label>
+        <select name="servicoId" id="servico">
+            <option selected disabled value="">Selecione um Serviço</option>
+            <option th:each="servico : ${serv}" th:value="${servico.id}">
+                <span th:text="${servico.nome_servico}"></span>
+            </option>
+        </select>
+
+        <label for="cliente">Cliente</label>
+        <select name="clienteId" id="cliente">
+            <option selected disabled value="">Selecione um cliente</option>
+            <option th:each="cliente : ${cls}" th:value="${cliente.id}" th:text="${cliente.nome}"></option>
+            <!--</select> -->
+
+            <br>
+
+            <br>
+
+            <label for="appointmentDate">Data do Agendamento:</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required><br><br>
+
+            <label for="appointmentTime">Horário do Agendamento:</label>
+            <select type="time" id="appointmentTime" name="appointmentTime" required>
+                <!--   Horários serão preenchidos via JavaScript -->
+            </select><br><br>
+
+            <input type="submit" value="Agendar">
+    </form>
+
+    <footer>
+        <span>
+            <img src="../static/images/logo.svg" alt="Barbearia">
+            <p>Cuidando com amor, vivendo com alegria: Barbearia, onde a vida é mais feliz</p>
+            <strong class="titulo">Siga Nossa Página</strong>
+
+            <p>Instagran: <a href="https://www.instagram.com/" target="_blank"><img src="../static/images/instagram.png"
+                        alt="" width="45" height="45"></a>Rua Das maravilhas 1122 Parque Sucesso-SP (11) 95678-2564.</p>
+        </span>
+
+        <div>
+            <strong class="titulo">Links rápidos</strong>
+            <nav>
+                <a href="./index.html">Início</a>
+                
+            </nav>
+        </div>
+
+    </footer>
+
+    <div id="copyright">Desenvolvido por <a href="https://github.com/tinonazaareth" target="_blank">@equipe2soulcode</a>
+        <p>&copy; 2023<span style='font: size 0.5em;;'>&#128640; Desenvolvedores FullStack Java.</span></p>
+
+    </div>
+
+    <script src="../static/js/formulario.js"></script>
+
+</body>
+
+</html>
+</body>
+
+</html>
