@@ -125,7 +125,6 @@ h2 {
   border-radius: 8px;
   color: #ffffff;
   text-decoration: none;
-  /* vertical, horizontal*/
   padding: 16px 32px;
 }
 
@@ -428,7 +427,7 @@ thead th {
   margin-bottom: 16px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-family: 'montserrat', sans-serif;
+ 
 }
 
 #appointmentForm input[type="submit"] {

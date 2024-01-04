@@ -15,13 +15,24 @@
 </head>
 
 <body>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <!--Cabeçalho-->
     <header>
-        <a href="/">
+        <a href="./index.html">
             <img src="../static/images/logo-white.svg" alt="Barbearia">
         </a>
         <nav>
-            <a href="./index.html">Início</a>
+            <a href="./index.html">Home</a>
             <a href="#salao">Salão</a>
             <a href="#loja">Nossa loja</a>
             <a href="#duvidas">Dúvidas</a>
@@ -33,7 +44,8 @@
     <!--Conteúdo-->
     <main>
         <section id="inicio">
-            <img src="../static/images/b3e48d9ebf692f1485e199dd3f6cbb28.jpg" alt="Homem de braços cruzados" width="420" height="360">
+            <img src="../static/images/b3e48d9ebf692f1485e199dd3f6cbb28.jpg" alt="Homem de braços cruzados" width="420"
+                height="360">
             <div>
                 <h1>Garanta uma barba bem cuidada e cabelos saudaveis</h1>
                 <p class="paragrafo">A Barbearia é seu refúgio de confiança para o cuidao completo da sua aparência. Com
@@ -74,7 +86,8 @@
                     <li>Área de convivência</li>
                 </ul>
             </div>
-            <img src="../static/images/361dbce283f5e400bc2e9d4b7734e589-ilustracao-de-poste-de-barbearia.png" alt="Imagem barbearia" width="480" height="480" loading="lazy">
+            <img src="../static/images/361dbce283f5e400bc2e9d4b7734e589-ilustracao-de-poste-de-barbearia.png"
+                alt="Imagem barbearia" width="480" height="480" loading="lazy">
         </section>
 
         <section id="loja">
@@ -98,7 +111,8 @@
 
         </section>
         <section id="duvidas">
-            <img src="../static/images/0689b7960214dba2323f97b411c61092-ilustracao-de-cadeira-de-barbearia.png" alt="Imagem cadeira de barbearia" width="540" height="540" loading="lazy">
+            <img src="../static/images/0689b7960214dba2323f97b411c61092-ilustracao-de-cadeira-de-barbearia.png"
+                alt="Imagem cadeira de barbearia" width="540" height="540" loading="lazy">
             <div>
                 <h2>Ficou com alguma dúvida?</h2>
                 <div class="duvida">
@@ -157,10 +171,11 @@
     <footer>
         <span>
             <img src="../static/images/logo.svg" alt="Barbearia">
-            <p>Cuidando com amor, vivendo com alegria: Barbearia, onde a vida é mais feliz</p>
+            <p>Cuidando com amor vivendo com alegria - Barbearia, onde a vida é mais feliz</p>
             <strong class="titulo">Siga Nossa Página</strong>
 
-            <p>Instagran: <a href="https://www.instagram.com/" target="_blank"><img src="../static/images/instagram.png" alt="" width="45" height="45"></a>Rua Das maravilhas 1122 Parque Sucesso-SP (11) 95678-2564.</p>
+            <p>Instagran: <a href="https://www.instagram.com/" target="_blank"><img src="../static/images/instagram.png"
+                        alt="" width="45" height="45"></a>Rua Das maravilhas 1122 Parque Sucesso-SP (11) 95678-2564.</p>
 
         </span>
 
@@ -180,6 +195,8 @@
         <p>&copy; 2023<span style='font: size 0.5em;;'>&#128640; Desenvolvedores FullStack Java.</span></p>
 
     </div>
+
+
 
     <script src="../static/js/index.js"></script>
 </body>
